@@ -26,3 +26,7 @@
 *.exe
 *.out
 *.app
+/Classes/Debug.win32
+proj.android-studio
+cocos2d
+Debug.win32
