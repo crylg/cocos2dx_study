@@ -30,3 +30,9 @@
 proj.android-studio
 cocos2d
 Debug.win32
+test.v12.suo
+*.suo
+obj
+assets
+armeabi
+gen
