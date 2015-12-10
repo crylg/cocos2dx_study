@@ -36,7 +36,7 @@ void HelloWorld::setViewpointCenter(Vec2 position)
 
 	x = MIN(x,(_tileMap->getMapSize().width*_tileMap->getTileSize().width-_screenWidth/2));
 	y = MIN(y, (_tileMap->getMapSize().height*_tileMap->getTileSize().height - _screenHeight / 2));
-	Point actualPosition = Vec2(_screenWidth / 2, _screenHeight / 2);
+	Point actualPosition = Vec2(x, y);
 
 	Point centerOfView = Vec2(_screenWidth / 2, _screenHeight / 2);
 
@@ -72,9 +72,31 @@ bool HelloWorld::init()
 	_player->setPosition(Point(x,y));
 	_player->setAnchorPoint(Point(0.5, 0));
 	_tileMap->addChild(_player);
-	setViewpointCenter(_player->getPosition());
-
+	
 	EventListenerTouchOneByOne* planeListener = EventListenerTouchOneByOne::create();
+	
+	planeListener->onTouchBegan = [](Touch* touch, Event* event){return true; };
+	planeListener->onTouchEnded = [this](Touch* touch, Event* event)
+	{
+		Vec2 touchLocation = touch->getLocation();
+		Vec2 nodeLocation = this->convertToNodeSpace(touchLocation);
+
+		if (_player->getPosition().x<nodeLocation.x)
+		{
+			if (!_player->isFlippedX())
+			{
+				_player->setFlippedX(true);
+			}
+		} 
+		else
+		{
+			if (_player->isFlippedX())
+				_player->setFlippedX(false);
+		}
+		_player->setPosition(nodeLocation);
+		setViewpointCenter(_player->getPosition());
+	};
+	Director::getInstance()->getEventDispatcher()->addEventListenerWithSceneGraphPriority(planeListener, this);
 
 	return true;
 }
