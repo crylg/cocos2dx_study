@@ -78,6 +78,8 @@ bool HelloWorld::init()
 	planeListener->onTouchBegan = [](Touch* touch, Event* event){return true; };
 	planeListener->onTouchEnded = [this](Touch* touch, Event* event)
 	{
+		this;
+		CCLOG("%%",touch->getPreviousLocation());
 		Vec2 touchLocation = touch->getLocation();
 		Vec2 nodeLocation = this->convertToNodeSpace(touchLocation);
 

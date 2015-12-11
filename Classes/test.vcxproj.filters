@@ -7,6 +7,12 @@
     <Filter Include="resource">
       <UniqueIdentifier>{715254bc-d70b-4ec5-bf29-467dd3ace079}</UniqueIdentifier>
     </Filter>
+    <Filter Include="game">
+      <UniqueIdentifier>{56655c20-06f6-4949-a7a2-e263685436d3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="elements">
+      <UniqueIdentifier>{190f1dbe-5789-4159-b180-7c4c32accdab}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\proj.win32\main.cpp">
@@ -14,6 +20,12 @@
     </ClCompile>
     <ClCompile Include="AppDelegate.cpp" />
     <ClCompile Include="HelloWorldScene.cpp" />
+    <ClCompile Include="ChipView.cpp">
+      <Filter>game</Filter>
+    </ClCompile>
+    <ClCompile Include="HandsPukeView.cpp" />
+    <ClCompile Include="HandsChipView.cpp" />
+    <ClCompile Include="VPuke.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\proj.win32\main.h">
@@ -21,5 +33,11 @@
     </ClInclude>
     <ClInclude Include="AppDelegate.h" />
     <ClInclude Include="HelloWorldScene.h" />
+    <ClInclude Include="ChipView.h">
+      <Filter>game</Filter>
+    </ClInclude>
+    <ClInclude Include="HandsPukeView.h" />
+    <ClInclude Include="HandsChipView.h" />
+    <ClInclude Include="VPuke.h" />
   </ItemGroup>
 </Project>
