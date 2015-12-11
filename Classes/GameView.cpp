@@ -47,6 +47,14 @@ bool GameView::init()
 	if (!node) return NULL;
 	addChild(node);
 	_playerInfoView = PlayerInfoView::create();
+	if (_playerInfoView == nullptr)
+	{
+		ASSERT(_playerInfoView);
+		return false;
+	}
+	
+
+	_playerInfoView->retain();
 	addChild(_playerInfoView);
 	CCLOG("x:%i,y:%i", _playerInfoView->getPosition().x, _playerInfoView->getPosition().y);
 	_playerInfoView->setPosition(100, 0);

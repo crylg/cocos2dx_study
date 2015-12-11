@@ -15,6 +15,7 @@ PlayerInfoView* PlayerInfoView::create()
 	PlayerInfoView *piv = new (std::nothrow) PlayerInfoView();
 	if (piv && piv->init())
 	{
+		piv->autorelease();
 		return piv;
 	}
 	CC_SAFE_DELETE(piv);

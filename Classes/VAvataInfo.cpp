@@ -17,6 +17,7 @@ VAvataInfo* VAvataInfo::create()
 	VAvataInfo *vai = new (std::nothrow) VAvataInfo();
 	if (vai && vai->init())
 	{
+		vai->autorelease();
 		return vai;
 	}
 	CC_SAFE_DELETE(vai);
