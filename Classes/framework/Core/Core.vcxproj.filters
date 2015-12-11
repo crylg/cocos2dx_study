@@ -1,0 +1,264 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="资源文件">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="Math">
+      <UniqueIdentifier>{a5f66703-1891-448e-8e88-e1421837fdaf}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Platform">
+      <UniqueIdentifier>{6a789721-988c-4824-8be9-07192f9f8bfc}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Memory">
+      <UniqueIdentifier>{d4d7443f-d353-457d-b305-5409faf8e864}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="FileSystem">
+      <UniqueIdentifier>{24162699-213b-46df-8046-9aeecdf23d12}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Common">
+      <UniqueIdentifier>{6e667d82-eb8b-47e0-ac60-097228226da3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Platform\WIN32">
+      <UniqueIdentifier>{2add13e1-d96e-41e0-954a-07dd8be94d34}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Package">
+      <UniqueIdentifier>{a3a7013b-ac83-4076-ba73-605bec5a57d9}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Inc\VMath.h">
+      <Filter>Math</Filter>
+    </ClInclude>
+    <ClInclude Include="Inc\VPlatform_Android.h">
+      <Filter>Platform</Filter>
+    </ClInclude>
+    <ClInclude Include="Inc\VPlatform_IOS.h">
+      <Filter>Platform</Filter>
+    </ClInclude>
+    <ClInclude Include="Inc\VPlatform_Win32.h">
+      <Filter>Platform</Filter>
+    </ClInclude>
+    <ClInclude Include="Inc\VPlatform.h">
+      <Filter>Platform</Filter>
+    </ClInclude>
+    <ClInclude Include="Inc\VMemory.h">
+      <Filter>Memory</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\arm_neon.h">
+      <Filter>Math</Filter>
+    </ClInclude>
+    <ClInclude Include="Inc\VSpline.h">
+      <Filter>Math</Filter>
+    </ClInclude>
+    <ClInclude Include="Inc\VGeometry.h">
+      <Filter>Math</Filter>
+    </ClInclude>
+    <ClInclude Include="Inc\VThreading.h">
+      <Filter>Platform</Filter>
+    </ClInclude>
+    <ClInclude Include="Inc\VColor.h">
+      <Filter>Math</Filter>
+    </ClInclude>
+    <ClInclude Include="Inc\VBounds.h">
+      <Filter>Math</Filter>
+    </ClInclude>
+    <ClInclude Include="Inc\VFile.h">
+      <Filter>FileSystem</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\KFileSystemWin32.h">
+      <Filter>FileSystem</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\KPackage.h">
+      <Filter>FileSystem</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\KFileSystem.h">
+      <Filter>FileSystem</Filter>
+    </ClInclude>
+    <ClInclude Include="Inc\VPackedFloat.h">
+      <Filter>Math</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\KAsyncIO.h">
+      <Filter>FileSystem</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\KFileSystemSTD.h">
+      <Filter>FileSystem</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\KCorePrivate.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="Inc\VTemplate.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="Inc\tinyxml2.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="Inc\VArray.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="Inc\VBase.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="Inc\VConfig.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="Inc\VConsole.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="Inc\VCore.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="Inc\VProfiler.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="Inc\VRTTI.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="Inc\VSerialize.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="Inc\VSmartPtr.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="Inc\VStream.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="Inc\VString.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\VStdAfx.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\KMemTracker.h">
+      <Filter>Memory</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\KMemory.h">
+      <Filter>Memory</Filter>
+    </ClInclude>
+    <ClInclude Include="Inc\VTransform.h">
+      <Filter>Math</Filter>
+    </ClInclude>
+    <ClInclude Include="Inc\VVMath.h">
+      <Filter>Math</Filter>
+    </ClInclude>
+    <ClInclude Include="Inc\VLog.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="Inc\VDelegate.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="Inc\VInterpolate.h">
+      <Filter>Math</Filter>
+    </ClInclude>
+    <ClInclude Include="Inc\VTask.h" />
+    <ClInclude Include="Src\KTaskManager.h" />
+    <ClInclude Include="Inc\VList.h" />
+    <ClInclude Include="Inc\VByteStream.h" />
+    <ClInclude Include="Inc\VEncrypt.h" />
+    <ClInclude Include="Src\sha1.h" />
+    <ClInclude Include="Inc\VCSVPaser.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="Inc\md5.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Src\VMath.cpp">
+      <Filter>Math</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\VPlatform.cpp">
+      <Filter>Platform</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\VMemory.cpp">
+      <Filter>Memory</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\VSpline.cpp">
+      <Filter>Math</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\VGeometry.cpp">
+      <Filter>Math</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\VThreading.cpp">
+      <Filter>Platform</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\VColor.cpp">
+      <Filter>Math</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\VBounds.cpp">
+      <Filter>Math</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\VFile.cpp">
+      <Filter>FileSystem</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\KFileSystemWin32.cpp">
+      <Filter>FileSystem</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\KPackage.cpp">
+      <Filter>FileSystem</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\KFileSystem.cpp">
+      <Filter>FileSystem</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\KAsyncIO.cpp">
+      <Filter>FileSystem</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\KFileSystemSTD.cpp">
+      <Filter>FileSystem</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\KRefString.cpp">
+      <Filter>Common</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\VString.cpp">
+      <Filter>Common</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\tinyxml2.cpp">
+      <Filter>Common</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\VBase.cpp">
+      <Filter>Common</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\VConfig.cpp">
+      <Filter>Common</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\VConsole.cpp">
+      <Filter>Common</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\VCore.cpp">
+      <Filter>Common</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\VProfiler.cpp">
+      <Filter>Common</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\VRTTI.cpp">
+      <Filter>Common</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\VSerialize.cpp">
+      <Filter>Common</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\VStdAfx.cpp">
+      <Filter>Common</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\VStream.cpp">
+      <Filter>Common</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\KMemTracker.cpp">
+      <Filter>Memory</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\VVMath.cpp">
+      <Filter>Math</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\VLog.cpp">
+      <Filter>Common</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\VTask.cpp" />
+    <ClCompile Include="Src\KTaskManager.cpp" />
+    <ClCompile Include="Src\VByteStream.cpp" />
+    <ClCompile Include="Src\VEncrypt.cpp" />
+    <ClCompile Include="Src\sha1.cpp" />
+    <ClCompile Include="Src\VPacketComm.cpp" />
+    <ClCompile Include="Src\VCSVPaser.cpp">
+      <Filter>Common</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\md5.cpp" />
+  </ItemGroup>
+</Project>

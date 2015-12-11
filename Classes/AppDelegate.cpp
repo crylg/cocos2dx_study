@@ -1,6 +1,7 @@
+#include "stdafx.h"
 #include "AppDelegate.h"
 #include "HelloWorldScene.h"
-
+#include "GameView.h"
 
 USING_NS_CC;
 Size mDesignSize = cocos2d::Size(1280.0f, 720.0f);
@@ -78,7 +79,7 @@ bool AppDelegate::applicationDidFinishLaunching() {
     register_all_packages();
 
     // create a scene. it's an autorelease object
-    auto scene = HelloWorld::createScene();
+    auto scene = GameView::createScene();
 
     // run
     director->runWithScene(scene);

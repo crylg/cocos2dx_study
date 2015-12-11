@@ -1,0 +1,147 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="12.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{A3A076E4-60A1-42F0-8CF3-B6F28E8A0E1A}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>VFunnyFoundation</RootNamespace>
+    <ProjectName>GFX</ProjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v120</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v120</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="..\..\VSProps\CommDebug.props" />
+    <Import Project="..\..\Client\cocos2d\cocos\2d\cocos2dx.props" />
+    <Import Project="..\..\Client\cocos2d\cocos\2d\cocos2d_headers.props" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="..\..\VSProps\CommRelease.props" />
+    <Import Project="..\..\Client\cocos2d\cocos\2d\cocos2dx.props" />
+    <Import Project="..\..\Client\cocos2d\cocos\2d\cocos2d_headers.props" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup />
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_CRT_SECURE_NO_WARNINGS;_SCL_SECURE_NO_WARNINGS;_WINSOCK_DEPRECATED_NO_WARNINGS;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>$(EngineRoot)\Framework;$(SolutionDir)\Framework\Core\Inc;$(SolutionDir)\Packets;Inc;Src;$(EngineRoot);$(EngineRoot)external;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalOptions>/Zm136 %(AdditionalOptions)</AdditionalOptions>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>vCore.lib;vlibcocos2d.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_CRT_SECURE_NO_WARNINGS;_SCL_SECURE_NO_WARNINGS;_WINSOCK_DEPRECATED_NO_WARNINGS;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <SDLCheck>true</SDLCheck>
+      <AdditionalIncludeDirectories>$(SolutionDir)\Framework\Core\Inc;$(SolutionDir)\Packets;Inc;Src;$(EngineRoot);$(EngineRoot)external;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalOptions>/Zm136 %(AdditionalOptions)</AdditionalOptions>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <AdditionalDependencies>vCore.lib;vlibcocos2d.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClInclude Include="..\TalkingDataGameAnalytics\android\TDGAJniHelper.h" />
+    <ClInclude Include="..\TalkingDataGameAnalytics\android\TDGALog.h" />
+    <ClInclude Include="..\TalkingDataGameAnalytics\include\TalkingData.h" />
+    <ClInclude Include="..\TalkingDataGameAnalytics\include\TDCCAccount.h" />
+    <ClInclude Include="..\TalkingDataGameAnalytics\include\TDCCItem.h" />
+    <ClInclude Include="..\TalkingDataGameAnalytics\include\TDCCMission.h" />
+    <ClInclude Include="..\TalkingDataGameAnalytics\include\TDCCTalkingDataGA.h" />
+    <ClInclude Include="..\TalkingDataGameAnalytics\include\TDCCVirtualCurrency.h" />
+    <ClInclude Include="Inc\CCWrapper.h" />
+    <ClInclude Include="Inc\VAction.h" />
+    <ClInclude Include="Inc\VAppComponent.h" />
+    <ClInclude Include="Inc\VComponent.h" />
+    <ClInclude Include="Inc\VImageHelper.h" />
+    <ClInclude Include="Inc\VNumberLabel.h" />
+    <ClInclude Include="Inc\VPacketFactory.h" />
+    <ClInclude Include="Inc\VShake.h" />
+    <ClInclude Include="Inc\VView.h" />
+    <ClInclude Include="Inc\VViewManager.h" />
+    <ClInclude Include="Inc\VAccountSystem.h" />
+    <ClInclude Include="Inc\VDeviceManager.h" />
+    <ClInclude Include="Inc\VGame.h" />
+    <ClInclude Include="Inc\VGFXBase.h" />
+    <ClInclude Include="Inc\VScene.h" />
+    <ClInclude Include="Inc\VServerSession.h" />
+    <ClInclude Include="Src\KPacketPool.h" />
+    <ClInclude Include="Src\VStdAfx.h" />
+    <ClInclude Include="VAvatar.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\TalkingDataGameAnalytics\android\TDCCAccount.cpp" />
+    <ClCompile Include="..\TalkingDataGameAnalytics\android\TDCCItem.cpp" />
+    <ClCompile Include="..\TalkingDataGameAnalytics\android\TDCCMIssion.cpp" />
+    <ClCompile Include="..\TalkingDataGameAnalytics\android\TDCCTalkingDataGA.cpp" />
+    <ClCompile Include="..\TalkingDataGameAnalytics\android\TDCCVirtualCurrency.cpp" />
+    <ClCompile Include="..\TalkingDataGameAnalytics\android\TDGAJniHelper.cpp" />
+    <ClCompile Include="Src\CCWrapper.cpp" />
+    <ClCompile Include="Src\VAction.cpp" />
+    <ClCompile Include="Src\VAppComponent.cpp" />
+    <ClCompile Include="Src\VComponent.cpp" />
+    <ClCompile Include="Src\VImageHelper.cpp" />
+    <ClCompile Include="Src\VNumberLabel.cpp" />
+    <ClCompile Include="Src\VPacketFactory.cpp" />
+    <ClCompile Include="Src\VShake.cpp" />
+    <ClCompile Include="Src\VView.cpp" />
+    <ClCompile Include="Src\VViewManager.cpp" />
+    <ClCompile Include="Src\KPacketPool.cpp" />
+    <ClCompile Include="Src\VAccountSystem.cpp" />
+    <ClCompile Include="Src\VDeviceManager.cpp" />
+    <ClCompile Include="Src\VGame.cpp" />
+    <ClCompile Include="Src\VScene.cpp" />
+    <ClCompile Include="Src\VServerSession.cpp" />
+    <ClCompile Include="Src\VStdAfx.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="VAvatar.cpp" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

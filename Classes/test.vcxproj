@@ -76,8 +76,7 @@
       <MinimalRebuild>false</MinimalRebuild>
       <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
       <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
-      <PrecompiledHeader>
-      </PrecompiledHeader>
+      <PrecompiledHeader>Use</PrecompiledHeader>
       <WarningLevel>Level3</WarningLevel>
       <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
       <DisableSpecificWarnings>4267;4251;4244;%(DisableSpecificWarnings)</DisableSpecificWarnings>
@@ -108,6 +107,9 @@ xcopy "$(ProjectDir)..\Resources" "$(OutDir)" /D /E /I /F /Y
       <Outputs>$(TargetName).cab</Outputs>
       <Inputs>$(TargetFileName)</Inputs>
     </CustomBuildStep>
+    <ClCompile>
+      <PrecompiledHeaderOutputFile Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(IntDir)$(TargetName).pch</PrecompiledHeaderOutputFile>
+    </ClCompile>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <ClCompile>
@@ -147,19 +149,31 @@ xcopy "$(ProjectDir)..\Resources" "$(OutDir)" /D /E /I /F /Y
     <ClCompile Include="..\proj.win32\main.cpp" />
     <ClCompile Include="AppDelegate.cpp" />
     <ClCompile Include="ChipView.cpp" />
+    <ClCompile Include="GameView.cpp" />
     <ClCompile Include="HandsChipView.cpp" />
     <ClCompile Include="HandsPukeView.cpp" />
     <ClCompile Include="HelloWorldScene.cpp" />
+    <ClCompile Include="PlayerInfoView.cpp" />
+    <ClCompile Include="stdafx.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="VAvataInfo.cpp" />
     <ClCompile Include="VPuke.cpp" />
+    <ClCompile Include="VView.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\proj.win32\main.h" />
     <ClInclude Include="AppDelegate.h" />
     <ClInclude Include="ChipView.h" />
+    <ClInclude Include="GameView.h" />
     <ClInclude Include="HandsChipView.h" />
     <ClInclude Include="HandsPukeView.h" />
     <ClInclude Include="HelloWorldScene.h" />
+    <ClInclude Include="PlayerInfoView.h" />
+    <ClInclude Include="stdafx.h" />
+    <ClInclude Include="VAvataInfo.h" />
     <ClInclude Include="VPuke.h" />
+    <ClInclude Include="VView.h" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\cocos2d\cocos\2d\libcocos2d.vcxproj">

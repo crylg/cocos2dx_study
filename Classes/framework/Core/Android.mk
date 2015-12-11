@@ -1,0 +1,17 @@
+LOCAL_PATH := $(call my-dir)
+
+include $(CLEAR_VARS)
+
+CORE_PROJ_PATH := $(LOCAL_PATH)
+
+LOCAL_MODULE := vCoreStatic
+LOCAL_MODULE_FILENAME := libvCore
+
+CORE_SRC_FILES := $(wildcard $(CORE_PROJ_PATH)/Src/*.cpp)
+LOCAL_SRC_FILES := $(subst $(CORE_PROJ_PATH)/,,$(CORE_SRC_FILES))
+
+CORE_INCLUDES := $(CORE_PROJ_PATH)/Inc 
+
+LOCAL_C_INCLUDES := $(CORE_INCLUDES) 
+
+include $(BUILD_STATIC_LIBRARY)

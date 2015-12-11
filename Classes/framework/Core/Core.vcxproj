@@ -1,0 +1,253 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="12.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{FD0A2178-67A9-4861-AA60-5EF5DCA921A2}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>Core</RootNamespace>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <CharacterSet>Unicode</CharacterSet>
+    <PlatformToolset>v120</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <CharacterSet>Unicode</CharacterSet>
+    <PlatformToolset>v120</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v120</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v120</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="..\..\VSProps\CommDebug.props" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="..\..\VSProps\CommDebug.props" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="..\..\VSProps\CommRelease.props" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="..\..\VSProps\CommRelease.props" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+    <IncludePath>D:\sdk\dxsdk\Include;$(IncludePath)</IncludePath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <LinkIncremental>true</LinkIncremental>
+    <IncludePath>D:\sdk\dxsdk\Include;$(IncludePath)</IncludePath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+    <TargetName>V$(ProjectName)</TargetName>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;_USRDLL;CORE_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <DisableSpecificWarnings>
+      </DisableSpecificWarnings>
+      <AdditionalOptions>/D _CRT_SECURE_NO_WARNINGS %(AdditionalOptions)</AdditionalOptions>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+    <PostBuildEvent>
+      <Command>copy $(TargetDir)$(TargetFileName) $(TargetDir)Server\$(TargetFileName)</Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;_USRDLL;CORE_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_WINDOWS;_USRDLL;CORE_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <ImportLibrary>%(AdditionalLibraryDirectories)$(TargetName).lib</ImportLibrary>
+    </Link>
+    <PostBuildEvent>
+      <Command>copy $(TargetDir)$(TargetFileName) $(TargetDir)AgentServer\$(TargetFileName)
+copy $(TargetDir)$(TargetFileName) $(TargetDir)DGameServer\$(TargetFileName)
+copy $(TargetDir)$(TargetFileName) $(TargetDir)WorldServer\$(TargetFileName)
+copy $(TargetDir)$(TargetFileName) $(TargetDir)DZoneServer\$(TargetFileName)</Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_WINDOWS;_USRDLL;CORE_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClInclude Include="Inc\md5.h" />
+    <ClInclude Include="Inc\tinyxml2.h" />
+    <ClInclude Include="Inc\VArray.h" />
+    <ClInclude Include="Inc\VBase.h" />
+    <ClInclude Include="Inc\VBounds.h" />
+    <ClInclude Include="Inc\VByteStream.h" />
+    <ClInclude Include="Inc\VColor.h" />
+    <ClInclude Include="Inc\VConfig.h" />
+    <ClInclude Include="Inc\VConsole.h" />
+    <ClInclude Include="Inc\VCore.h" />
+    <ClInclude Include="Inc\VCSVPaser.h" />
+    <ClInclude Include="Inc\VDelegate.h" />
+    <ClInclude Include="Inc\VEncrypt.h" />
+    <ClInclude Include="Inc\VFile.h" />
+    <ClInclude Include="Inc\VGeometry.h" />
+    <ClInclude Include="Inc\VInterpolate.h" />
+    <ClInclude Include="Inc\VList.h" />
+    <ClInclude Include="Inc\VLog.h" />
+    <ClInclude Include="Inc\VMath.h" />
+    <ClInclude Include="Inc\VMemory.h" />
+    <ClInclude Include="Inc\VPackedFloat.h" />
+    <ClInclude Include="Inc\VPlatform.h" />
+    <ClInclude Include="Inc\VPlatform_Android.h" />
+    <ClInclude Include="Inc\VPlatform_IOS.h" />
+    <ClInclude Include="Inc\VPlatform_Win32.h" />
+    <ClInclude Include="Inc\VProfiler.h" />
+    <ClInclude Include="Inc\VRTTI.h" />
+    <ClInclude Include="Inc\VSerialize.h" />
+    <ClInclude Include="Inc\VSmartPtr.h" />
+    <ClInclude Include="Inc\VSpline.h" />
+    <ClInclude Include="Inc\VStream.h" />
+    <ClInclude Include="Inc\VString.h" />
+    <ClInclude Include="Inc\VTask.h" />
+    <ClInclude Include="Inc\VTemplate.h" />
+    <ClInclude Include="Inc\VThreading.h" />
+    <ClInclude Include="Inc\VTransform.h" />
+    <ClInclude Include="Inc\VVMath.h" />
+    <ClInclude Include="Src\arm_neon.h" />
+    <ClInclude Include="Src\KAsyncIO.h" />
+    <ClInclude Include="Src\KCorePrivate.h" />
+    <ClInclude Include="Src\KFileSystem.h" />
+    <ClInclude Include="Src\KFileSystemSTD.h" />
+    <ClInclude Include="Src\KFileSystemWin32.h" />
+    <ClInclude Include="Src\KMemory.h" />
+    <ClInclude Include="Src\KMemTracker.h" />
+    <ClInclude Include="Src\KPackage.h" />
+    <ClInclude Include="Src\KTaskManager.h" />
+    <ClInclude Include="Src\sha1.h" />
+    <ClInclude Include="Src\VStdAfx.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Src\KAsyncIO.cpp" />
+    <ClCompile Include="Src\KFileSystem.cpp" />
+    <ClCompile Include="Src\KFileSystemSTD.cpp" />
+    <ClCompile Include="Src\KFileSystemWin32.cpp" />
+    <ClCompile Include="Src\KMemTracker.cpp" />
+    <ClCompile Include="Src\KPackage.cpp" />
+    <ClCompile Include="Src\KRefString.cpp" />
+    <ClCompile Include="Src\KTaskManager.cpp" />
+    <ClCompile Include="Src\md5.cpp" />
+    <ClCompile Include="Src\sha1.cpp" />
+    <ClCompile Include="Src\tinyxml2.cpp" />
+    <ClCompile Include="Src\VBase.cpp" />
+    <ClCompile Include="Src\VBounds.cpp" />
+    <ClCompile Include="Src\VByteStream.cpp" />
+    <ClCompile Include="Src\VColor.cpp" />
+    <ClCompile Include="Src\VConfig.cpp" />
+    <ClCompile Include="Src\VConsole.cpp" />
+    <ClCompile Include="Src\VCore.cpp" />
+    <ClCompile Include="Src\VCSVPaser.cpp" />
+    <ClCompile Include="Src\VEncrypt.cpp" />
+    <ClCompile Include="Src\VFile.cpp" />
+    <ClCompile Include="Src\VGeometry.cpp" />
+    <ClCompile Include="Src\VLog.cpp" />
+    <ClCompile Include="Src\VMath.cpp" />
+    <ClCompile Include="Src\VMemory.cpp" />
+    <ClCompile Include="Src\VPacketComm.cpp" />
+    <ClCompile Include="Src\VPlatform.cpp" />
+    <ClCompile Include="Src\VProfiler.cpp" />
+    <ClCompile Include="Src\VRTTI.cpp" />
+    <ClCompile Include="Src\VSerialize.cpp" />
+    <ClCompile Include="Src\VSpline.cpp" />
+    <ClCompile Include="Src\VStdAfx.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Create</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="Src\VStream.cpp" />
+    <ClCompile Include="Src\VString.cpp" />
+    <ClCompile Include="Src\VTask.cpp" />
+    <ClCompile Include="Src\VThreading.cpp" />
+    <ClCompile Include="Src\VVMath.cpp" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

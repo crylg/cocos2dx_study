@@ -7,6 +7,7 @@ public:
 	ChipView();
 	~ChipView();
 private:
-	std::vector<>
+
 };
+
 

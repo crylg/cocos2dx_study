@@ -1,0 +1,126 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple Computer//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+	<dict>
+		<key>frames</key>
+		<dict>
+			<key>common/dikuang01.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{101,62},{43,41}}</string>
+				<key>offset</key>
+				<string>{0,0}</string>
+				<key>rotated</key>
+				<false />
+				<key>sourceSize</key>
+				<string>{43,41}</string>
+			</dict>
+			<key>common/dikuang02.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{186,73},{31,29}}</string>
+				<key>offset</key>
+				<string>{0,0}</string>
+				<key>rotated</key>
+				<false />
+				<key>sourceSize</key>
+				<string>{31,29}</string>
+			</dict>
+			<key>common/heisedi.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{146,62},{38,35}}</string>
+				<key>offset</key>
+				<string>{0,0}</string>
+				<key>rotated</key>
+				<false />
+				<key>sourceSize</key>
+				<string>{38,35}</string>
+			</dict>
+			<key>common/jinbikuang.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{219,73},{26,27}}</string>
+				<key>offset</key>
+				<string>{0,0}</string>
+				<key>rotated</key>
+				<true />
+				<key>sourceSize</key>
+				<string>{26,27}</string>
+			</dict>
+			<key>common/juesedikuang.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{146,99},{29,28}}</string>
+				<key>offset</key>
+				<string>{0,0}</string>
+				<key>rotated</key>
+				<false />
+				<key>sourceSize</key>
+				<string>{29,28}</string>
+			</dict>
+			<key>common/xialadikuang.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{101,1},{94,59}}</string>
+				<key>offset</key>
+				<string>{0,0}</string>
+				<key>rotated</key>
+				<false />
+				<key>sourceSize</key>
+				<string>{94,59}</string>
+			</dict>
+			<key>common/diban01.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{1,1},{89,98}}</string>
+				<key>offset</key>
+				<string>{0,0}</string>
+				<key>rotated</key>
+				<true />
+				<key>sourceSize</key>
+				<string>{89,98}</string>
+			</dict>
+			<key>common/rl_b.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{219,101},{26,26}}</string>
+				<key>offset</key>
+				<string>{0,0}</string>
+				<key>rotated</key>
+				<false />
+				<key>sourceSize</key>
+				<string>{26,26}</string>
+			</dict>
+			<key>hall/black.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{197,1},{42,70}}</string>
+				<key>offset</key>
+				<string>{0,0}</string>
+				<key>rotated</key>
+				<false />
+				<key>sourceSize</key>
+				<string>{42,70}</string>
+			</dict>
+		</dict>
+		<key>metadata</key>
+		<dict>
+			<key>format</key>
+			<integer>2</integer>
+			<key>textureFileName</key>
+			<string>common.png</string>
+			<key>realTextureFileName</key>
+			<string>common.png</string>
+			<key>size</key>
+			<string>{256,128}</string>
+		</dict>
+		<key>texture</key>
+		<dict>
+			<key>width</key>
+			<integer>256</integer>
+			<key>height</key>
+			<integer>128</integer>
+		</dict>
+	</dict>
+</plist>
