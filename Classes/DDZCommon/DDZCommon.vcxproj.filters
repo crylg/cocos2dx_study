@@ -1,0 +1,101 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Game">
+      <UniqueIdentifier>{f42d7762-7a0f-4ffd-a67f-49add269deef}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AI">
+      <UniqueIdentifier>{6df5efbd-6acb-4c7b-a77e-ca4d1efc76c3}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Inc\DCard.h">
+      <Filter>Game</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\VStdAfx.h">
+      <Filter>Game</Filter>
+    </ClInclude>
+    <ClInclude Include="Inc\DHand.h">
+      <Filter>Game</Filter>
+    </ClInclude>
+    <ClInclude Include="Inc\DDeck.h">
+      <Filter>Game</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\DAILord.h">
+      <Filter>AI</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\DAIPostLord.h">
+      <Filter>AI</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\DAIPreLord.h">
+      <Filter>AI</Filter>
+    </ClInclude>
+    <ClInclude Include="Inc\DGameAI.h">
+      <Filter>AI</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\DNormalAI.h">
+      <Filter>AI</Filter>
+    </ClInclude>
+    <ClInclude Include="Inc\DGameDefine.h">
+      <Filter>Game</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\DAISlover.h">
+      <Filter>AI</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\DAIFarmer.h">
+      <Filter>AI</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\DHintUnslover.h">
+      <Filter>AI</Filter>
+    </ClInclude>
+    <ClInclude Include="Inc\DDeckStruct.h">
+      <Filter>Game</Filter>
+    </ClInclude>
+    <ClInclude Include="Inc\DMatch.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Src\DCard.cpp">
+      <Filter>Game</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\VStdAfx.cpp">
+      <Filter>Game</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\DHand.cpp">
+      <Filter>Game</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\DDeck.cpp">
+      <Filter>Game</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\DAILord.cpp">
+      <Filter>AI</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\DAIPostLord.cpp">
+      <Filter>AI</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\DAIPreLord.cpp">
+      <Filter>AI</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\DGameAI.cpp">
+      <Filter>AI</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\DNormalAI.cpp">
+      <Filter>AI</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\DAISlover.cpp">
+      <Filter>AI</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\DAIFarmer.cpp">
+      <Filter>AI</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\DHint.cpp">
+      <Filter>AI</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\DHintUnslover.cpp">
+      <Filter>AI</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\DDeckStruct.cpp">
+      <Filter>Game</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\DMatch.cpp" />
+  </ItemGroup>
+</Project>

@@ -40,3 +40,4 @@ gen
 /proj.win32/*.opensdf
 Bin
 Intermediate
+/proj.win32/test.VC.opendb

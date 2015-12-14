@@ -13,6 +13,12 @@
     <Filter Include="elements">
       <UniqueIdentifier>{190f1dbe-5789-4159-b180-7c4c32accdab}</UniqueIdentifier>
     </Filter>
+    <Filter Include="game\info">
+      <UniqueIdentifier>{28cb0792-195e-495a-90e4-d184bfa3b36a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="game\info\avata">
+      <UniqueIdentifier>{02b017c3-dd39-436a-a1c2-9d91049f2965}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\proj.win32\main.cpp">
@@ -36,9 +42,19 @@
       <Filter>game</Filter>
     </ClCompile>
     <ClCompile Include="stdafx.cpp" />
-    <ClCompile Include="PlayerInfoView.cpp" />
-    <ClCompile Include="VAvataInfo.cpp" />
     <ClCompile Include="VView.cpp" />
+    <ClCompile Include="VAvataInfo.cpp">
+      <Filter>game\info\avata</Filter>
+    </ClCompile>
+    <ClCompile Include="VAvataInfoOther.cpp">
+      <Filter>game\info\avata</Filter>
+    </ClCompile>
+    <ClCompile Include="VAvataInfoSelf.cpp">
+      <Filter>game\info\avata</Filter>
+    </ClCompile>
+    <ClCompile Include="PlayerInfoView.cpp">
+      <Filter>game\info</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\proj.win32\main.h">
@@ -62,8 +78,18 @@
       <Filter>game</Filter>
     </ClInclude>
     <ClInclude Include="stdafx.h" />
-    <ClInclude Include="PlayerInfoView.h" />
-    <ClInclude Include="VAvataInfo.h" />
     <ClInclude Include="VView.h" />
+    <ClInclude Include="VAvataInfo.h">
+      <Filter>game\info\avata</Filter>
+    </ClInclude>
+    <ClInclude Include="VAvataInfoOther.h">
+      <Filter>game\info\avata</Filter>
+    </ClInclude>
+    <ClInclude Include="VAvataInfoSelf.h">
+      <Filter>game\info\avata</Filter>
+    </ClInclude>
+    <ClInclude Include="PlayerInfoView.h">
+      <Filter>game\info</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

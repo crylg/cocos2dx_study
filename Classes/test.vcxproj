@@ -158,6 +158,8 @@ xcopy "$(ProjectDir)..\Resources" "$(OutDir)" /D /E /I /F /Y
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
     </ClCompile>
     <ClCompile Include="VAvataInfo.cpp" />
+    <ClCompile Include="VAvataInfoOther.cpp" />
+    <ClCompile Include="VAvataInfoSelf.cpp" />
     <ClCompile Include="VPuke.cpp" />
     <ClCompile Include="VView.cpp" />
   </ItemGroup>
@@ -172,6 +174,8 @@ xcopy "$(ProjectDir)..\Resources" "$(OutDir)" /D /E /I /F /Y
     <ClInclude Include="PlayerInfoView.h" />
     <ClInclude Include="stdafx.h" />
     <ClInclude Include="VAvataInfo.h" />
+    <ClInclude Include="VAvataInfoOther.h" />
+    <ClInclude Include="VAvataInfoSelf.h" />
     <ClInclude Include="VPuke.h" />
     <ClInclude Include="VView.h" />
   </ItemGroup>

@@ -1,37 +1,80 @@
 #include "stdafx.h"
 #include "PlayerInfoView.h"
 #include "VAvataInfo.h"
-
+#include "VAvataInfoOther.h"
+#include "VAvataInfoSelf.h"
 USING_NS_CC;
 bool PlayerInfoView::init()
 {
-	createBg();
-	createAvataInfo();
 	return true;
 }
 
-PlayerInfoView* PlayerInfoView::create()
+void PlayerInfoView::layout(ePlayerType type, ePosition p)
 {
-	PlayerInfoView *piv = new (std::nothrow) PlayerInfoView();
-	if (piv && piv->init())
-	{
-		piv->autorelease();
-		return piv;
-	}
-	CC_SAFE_DELETE(piv);
-	return nullptr;
+	createBg(type);
+	createAvataInfo(type);
+	_vBg->setPosition(this->getPositionByEPosition(p));
 }
 
 
-void PlayerInfoView::createBg()
+void PlayerInfoView::createBg(ePlayerType type)
 {
-	_vBg = this->LoadView("game/player_time.csb");
+	
+	std::string str= "game/";
+	switch (type)
+	{
+	case ePlayerType::Other:
+		str+= "player_time.csb";
+		break;
+	case ePlayerType::Self:
+		str+= "user_time.csb";
+		break;
+	default:
+		break;
+	}
+	_vBg = this->LoadView(str.c_str());
 	addChild(_vBg);
 }
 
-void PlayerInfoView::createAvataInfo()
+void PlayerInfoView::createAvataInfo(ePlayerType type)
 {
-	_vAvataInfo = VAvataInfo::create();
-	this->addChild(_vAvataInfo);
+	_vAvataInfo = VAvataInfoOther::create();
+	switch (type)
+	{
+	case ePlayerType::Self:
+		_vAvataInfo = VAvataInfoSelf::create();
+		break;
+	case ePlayerType::Other:
+		_vAvataInfo = VAvataInfoOther::create();
+		break;
+	default:
+		break;
+	}
+	
+	_vBg->addChild(_vAvataInfo);
+}
+
+cocos2d::Vec2 PlayerInfoView::getPositionByEPosition(ePosition p)
+{
+	Vec2 tmpP;
+	switch (p)
+	{
+		case ePosition::LB:
+			tmpP.setPoint(71,273);
+			break;
+		case ePosition::LT:
+			tmpP.setPoint(183.5,493);
+			break;
+		case ePosition::RB:
+			tmpP.setPoint(1215,273);
+			break;
+		case ePosition::RT:
+			tmpP.setPoint(1103,493);
+			break;
+		default:
+			tmpP.setZero();
+			break;
+	}
+	return tmpP;
 }
 
