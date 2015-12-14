@@ -149,6 +149,7 @@ xcopy "$(ProjectDir)..\Resources" "$(OutDir)" /D /E /I /F /Y
     <ClCompile Include="..\proj.win32\main.cpp" />
     <ClCompile Include="AppDelegate.cpp" />
     <ClCompile Include="ChipView.cpp" />
+    <ClCompile Include="DNGameComponent.cpp" />
     <ClCompile Include="GameView.cpp" />
     <ClCompile Include="HandsChipView.cpp" />
     <ClCompile Include="HandsPukeView.cpp" />
@@ -167,6 +168,7 @@ xcopy "$(ProjectDir)..\Resources" "$(OutDir)" /D /E /I /F /Y
     <ClInclude Include="..\proj.win32\main.h" />
     <ClInclude Include="AppDelegate.h" />
     <ClInclude Include="ChipView.h" />
+    <ClInclude Include="DNGameComponent.h" />
     <ClInclude Include="GameView.h" />
     <ClInclude Include="HandsChipView.h" />
     <ClInclude Include="HandsPukeView.h" />

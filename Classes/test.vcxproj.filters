@@ -55,6 +55,7 @@
     <ClCompile Include="PlayerInfoView.cpp">
       <Filter>game\info</Filter>
     </ClCompile>
+    <ClCompile Include="DNGameComponent.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\proj.win32\main.h">
@@ -91,5 +92,6 @@
     <ClInclude Include="PlayerInfoView.h">
       <Filter>game\info</Filter>
     </ClInclude>
+    <ClInclude Include="DNGameComponent.h" />
   </ItemGroup>
 </Project>
