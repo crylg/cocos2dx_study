@@ -1,0 +1,153 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="Account">
+      <UniqueIdentifier>{f647dadc-669d-4634-a77e-fac79cc7a10c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Payment">
+      <UniqueIdentifier>{53cb84da-bccd-404c-ab49-de0385bb6483}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="DailyLogin">
+      <UniqueIdentifier>{cccb0b94-f6b7-4d52-a9e4-e7571de057ac}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Mail">
+      <UniqueIdentifier>{4825c4db-adae-4e74-9379-62e545555827}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Common">
+      <UniqueIdentifier>{e3456e9e-695a-4b78-8609-46ba7d33fc9c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="TalkingDataGameAnalytics">
+      <UniqueIdentifier>{7ec4250e-723c-438c-9dec-2e66b42333ad}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="TalkingDataGameAnalytics\android">
+      <UniqueIdentifier>{40b119a5-e1e5-42c2-b1f7-2a5490ae042e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="TalkingDataGameAnalytics\include">
+      <UniqueIdentifier>{76c1d4f2-c13b-4076-9a9e-0d6d3f4a8da7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="TalkingDataGameAnalytics\ios">
+      <UniqueIdentifier>{aef2e50c-2805-46e3-9bf4-fbed03b78190}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Inc\VServerSession.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\VStdAfx.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="Inc\VAccountSystem.h">
+      <Filter>Account</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\KPacketPool.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="Inc\VGame.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="Inc\VGFXBase.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="Inc\VScene.h" />
+    <ClInclude Include="Inc\CCWrapper.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="Inc\VDeviceManager.h" />
+    <ClInclude Include="Inc\VViewManager.h" />
+    <ClInclude Include="Inc\VComponent.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="Inc\VView.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="Inc\VAppComponent.h" />
+    <ClInclude Include="VAvatar.h" />
+    <ClInclude Include="Inc\VShake.h" />
+    <ClInclude Include="Inc\VNumberLabel.h" />
+    <ClInclude Include="Inc\VPacketFactory.h" />
+    <ClInclude Include="Inc\VImageHelper.h" />
+    <ClInclude Include="..\TalkingDataGameAnalytics\android\TDGAJniHelper.h">
+      <Filter>TalkingDataGameAnalytics\android</Filter>
+    </ClInclude>
+    <ClInclude Include="..\TalkingDataGameAnalytics\android\TDGALog.h">
+      <Filter>TalkingDataGameAnalytics\android</Filter>
+    </ClInclude>
+    <ClInclude Include="..\TalkingDataGameAnalytics\include\TalkingData.h">
+      <Filter>TalkingDataGameAnalytics\include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\TalkingDataGameAnalytics\include\TDCCAccount.h">
+      <Filter>TalkingDataGameAnalytics\include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\TalkingDataGameAnalytics\include\TDCCItem.h">
+      <Filter>TalkingDataGameAnalytics\include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\TalkingDataGameAnalytics\include\TDCCMission.h">
+      <Filter>TalkingDataGameAnalytics\include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\TalkingDataGameAnalytics\include\TDCCTalkingDataGA.h">
+      <Filter>TalkingDataGameAnalytics\include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\TalkingDataGameAnalytics\include\TDCCVirtualCurrency.h">
+      <Filter>TalkingDataGameAnalytics\include</Filter>
+    </ClInclude>
+    <ClInclude Include="Inc\VAction.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Src\VServerSession.cpp">
+      <Filter>Common</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\VStdAfx.cpp">
+      <Filter>Common</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\VAccountSystem.cpp">
+      <Filter>Account</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\KPacketPool.cpp">
+      <Filter>Common</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\VGame.cpp">
+      <Filter>Common</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\VScene.cpp" />
+    <ClCompile Include="Src\CCWrapper.cpp">
+      <Filter>Common</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\VDeviceManager.cpp" />
+    <ClCompile Include="Src\VViewManager.cpp" />
+    <ClCompile Include="Src\VComponent.cpp">
+      <Filter>Common</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\VView.cpp">
+      <Filter>Common</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\VAppComponent.cpp" />
+    <ClCompile Include="VAvatar.cpp" />
+    <ClCompile Include="Src\VShake.cpp" />
+    <ClCompile Include="Src\VNumberLabel.cpp" />
+    <ClCompile Include="Src\VPacketFactory.cpp" />
+    <ClCompile Include="Src\VImageHelper.cpp" />
+    <ClCompile Include="..\TalkingDataGameAnalytics\android\TDCCAccount.cpp">
+      <Filter>TalkingDataGameAnalytics\android</Filter>
+    </ClCompile>
+    <ClCompile Include="..\TalkingDataGameAnalytics\android\TDCCItem.cpp">
+      <Filter>TalkingDataGameAnalytics\android</Filter>
+    </ClCompile>
+    <ClCompile Include="..\TalkingDataGameAnalytics\android\TDCCMIssion.cpp">
+      <Filter>TalkingDataGameAnalytics\android</Filter>
+    </ClCompile>
+    <ClCompile Include="..\TalkingDataGameAnalytics\android\TDCCTalkingDataGA.cpp">
+      <Filter>TalkingDataGameAnalytics\android</Filter>
+    </ClCompile>
+    <ClCompile Include="..\TalkingDataGameAnalytics\android\TDCCVirtualCurrency.cpp">
+      <Filter>TalkingDataGameAnalytics\android</Filter>
+    </ClCompile>
+    <ClCompile Include="..\TalkingDataGameAnalytics\android\TDGAJniHelper.cpp">
+      <Filter>TalkingDataGameAnalytics\android</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\VAction.cpp" />
+  </ItemGroup>
+</Project>
